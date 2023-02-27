@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "platform-k8s"
+
+    workspaces {
+      name = "dev"
+    }
+  }
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
